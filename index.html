@@ -25,20 +25,33 @@
         .container {
             text-align: center;
             z-index: 1;
+            /* 添加固定高度並確保內容垂直居中 */
+            height: 300px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
         }
 
         #typewriter {
             font-size: 2.5em;
-            margin-bottom: 1.5em;
-            min-height: 3em;
             font-weight: 700;
             text-shadow: 0 0 10px rgba(255,255,255,0.3);
+            /* 確保打字機區域有固定高度 */
+            height: 1.5em;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2em;
         }
 
         .social-links {
             display: flex;
             gap: 2em;
-            margin-top: 2em;
+            /* 確保社交連結容器位置固定 */
+            position: absolute;
+            bottom: 0;
         }
 
         .social-link {
@@ -75,6 +88,7 @@
             background-color: #ffffff;
             margin-left: 5px;
             animation: cursor 1s infinite;
+            vertical-align: middle;
         }
 
         @keyframes cursor {
